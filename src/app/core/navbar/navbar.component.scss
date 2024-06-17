@@ -1,0 +1,55 @@
+@import '../../../styles.scss';
+
+.navbar {
+  background-color: $color-background;
+  padding: 10px 20px;
+  font-family: $font-family;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 20%;
+    
+    &__image {
+      width: 70px;
+      border-radius: 50%;
+    }
+  }
+
+
+  &__collapse {
+    width: 80%;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+    &__item {
+      margin-right: 10px;
+
+      &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-text;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+}
