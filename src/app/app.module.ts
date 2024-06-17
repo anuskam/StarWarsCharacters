@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CharactersModule } from './characters/characters.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -9,22 +9,27 @@ import { importProvidersFrom } from '@angular/core';
 // i18n
 import { TranslateModule } from '@ngx-translate/core';
 import { provideTranslation } from './core/config/i18n/translate-loader.config';
-import { CharactersListComponent } from './characters/characters-list/characters-list.component';
-import { CharacterCardComponent } from './characters/character-card/character-card.component';
-/* import { MultiLanguageComponent } from './components/multi-language/multi-language.component'; */
+import { Error404Component } from './core/error404/error404.component';
+import { NavbarComponent } from './core/navbar/navbar.component';
+import { MultiLanguageComponent } from './core/multi-language/multi-language.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    CharactersListComponent,
-    CharacterCardComponent
+    Error404Component,
+    NavbarComponent,
+    MultiLanguageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TranslateModule,
     HttpClientModule,
+    CharactersModule,
   ],
-  providers: [importProvidersFrom(TranslateModule.forRoot(provideTranslation()))],
-  bootstrap: [AppComponent]
+  providers: [
+    importProvidersFrom(TranslateModule.forRoot(provideTranslation())),
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
