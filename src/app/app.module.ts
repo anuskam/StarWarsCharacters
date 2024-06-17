@@ -9,10 +9,14 @@ import { importProvidersFrom } from '@angular/core';
 // i18n
 import { TranslateModule } from '@ngx-translate/core';
 import { provideTranslation } from './core/config/i18n/translate-loader.config';
+import { CharactersListComponent } from './characters/characters-list/characters-list.component';
+import { CharacterCardComponent } from './characters/character-card/character-card.component';
 /* import { MultiLanguageComponent } from './components/multi-language/multi-language.component'; */
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CharactersListComponent,
+    CharacterCardComponent
   ],
   imports: [
     BrowserModule,
