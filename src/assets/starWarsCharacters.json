@@ -1,0 +1,224 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "galactic_registration": 1001,
+      "name": "Luke Skywalker",
+      "species": "Human",
+      "languages": 6,
+      "wars": 3,
+      "defenses": 10,
+      "image": "/assets/images/luke_skywalker.jpg",
+      "headline": "Headliner",
+      "comment": "Hero of the Rebel Alliance",
+      "place_of_birth": "Tatooine",
+      "date_of_birth": "19BBY",
+      "weight": 77,
+      "height": 172,
+      "planets_visited": [
+        {
+          "name": "Tatooine",
+          "visits": 2
+        },
+        {
+          "name": "Endor",
+          "visits": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "galactic_registration": 1002,
+      "name": "Darth Vader",
+      "species": "Human",
+      "languages": 4,
+      "wars": 5,
+      "defenses": 15,
+      "image": "/assets/images/darth_vader.jpg",
+      "headline": "Headliner",
+      "comment": "Dark Lord of the Sith",
+      "place_of_birth": "Tatooine",
+      "date_of_birth": "41.9BBY",
+      "weight": 120,
+      "height": 202,
+      "planets_visited": [
+        {
+          "name": "Mustafar",
+          "visits": 1
+        },
+        {
+          "name": "Coruscant",
+          "visits": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "galactic_registration": 1004,
+      "name": "Chewbacca",
+      "species": "Wookiee",
+      "languages": 3,
+      "wars": 4,
+      "defenses": 18,
+      "image": "/assets/images/chewbacca.jpg",
+      "headline": "Co-pilot",
+      "comment": "Loyal co-pilot of the Millennium Falcon",
+      "place_of_birth": "Kashyyyk",
+      "date_of_birth": "200BBY",
+      "weight": 112,
+      "height": 228,
+      "planets_visited": [
+        {
+          "name": "Kashyyyk",
+          "visits": 10
+        },
+        {
+          "name": "Corellia",
+          "visits": 3
+        },
+        {
+          "name": "Nal Hutta",
+          "visits": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "galactic_registration": 1003,
+      "name": "Yoda",
+      "species": "Unknown",
+      "languages": 1,
+      "wars": 5,
+      "defenses": 20,
+      "image": "/assets/images/yoda.jpg",
+      "headline": "Master",
+      "comment": "Grand Master of the Jedi Order",
+      "place_of_birth": "Unknown",
+      "date_of_birth": "896BBY",
+      "weight": 17,
+      "height": 66,
+      "planets_visited": [
+        {
+          "name": "Coruscant",
+          "visits": 4
+        },
+        {
+          "name": "Dagobah",
+          "visits": 1
+        },
+        {
+          "name": "Kamino",
+          "visits": 1
+        },
+        {
+          "name": "Ilum",
+          "visits": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "galactic_registration": 1008,
+      "name": "R2-D2",
+      "species": "Droid",
+      "languages": 6,
+      "wars": 5,
+      "defenses": 12,
+      "image": "/assets/images/R2D2.jpg",
+      "headline": "Astro droid",
+      "comment": "Resourceful astromech of the Rebel Alliance",
+      "place_of_birth": "Naboo",
+      "date_of_birth": "33BBY",
+      "weight": 32,
+      "height": 96,
+      "planets_visited": [
+        {
+          "name": "Kashyyyk",
+          "visits": 6
+        },
+        {
+          "name": "Bespin",
+          "visits": 1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "galactic_registration": 1005,
+      "name": "Princess Leia Organa",
+      "species": "Human",
+      "languages": 5,
+      "wars": 3,
+      "defenses": 8,
+      "image": "/assets/images/leia_organa.jpg",
+      "headline": "Princess",
+      "comment": "Leader of the Rebel Alliance",
+      "place_of_birth": "Polis Massa",
+      "date_of_birth": "19BBY",
+      "weight": 55,
+      "height": 150,
+      "planets_visited": [
+        {
+          "name": "Alderaan",
+          "visits": 1
+        },
+        {
+          "name": "Yavin 4",
+          "visits": 2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "galactic_registration": 2020,
+      "name": "Tarfful",
+      "species": "Wookiee",
+      "languages": 2,
+      "wars": 3,
+      "defenses": 20,
+      "image": "/assets/images/wookie.jpg",
+      "headline": "Wookiee Chieftain",
+      "comment": "Valiant leader and warrior of Kashyyyk",
+      "place_of_birth": "Kashyyyk",
+      "date_of_birth": "500BBY",
+      "weight": 136,
+      "height": 240,
+      "planets_visited": [
+        {
+          "name": "Scarif",
+          "visits": 2
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "galactic_registration": 1009,
+      "name": "C-3PO",
+      "species": "Droid",
+      "languages": 6,
+      "wars": 5,
+      "defenses": 6,
+      "image": "/assets/images/C3PO.jpg",
+      "headline": "Protocol droid",
+      "comment": "Protocol and translator droid for the Rebel Alliance",
+      "place_of_birth": "Tatooine",
+      "date_of_birth": "112BBY",
+      "weight": 75,
+      "height": 167,
+      "planets_visited": [
+        {
+          "name": "Endor",
+          "visits": 3
+        },
+        {
+          "name": "Tatooine",
+          "visits": 2
+        },
+        {
+          "name": "Jakku",
+          "visits": 7
+        }
+      ]
+    }
+  ]
+}
