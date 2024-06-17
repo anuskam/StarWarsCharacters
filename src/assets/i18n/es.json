@@ -1,3 +1,10 @@
 {
-    "title": "Titulito"
+  "navbar": {
+    "home": "Inicio",
+    "movies": "Películas",
+    "characters": "Personajes",
+    "planets": "Planetas",
+    "ships": "Naves",
+    "species": "Especies"
+  }
 }
