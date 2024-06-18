@@ -5,7 +5,11 @@ $color-accent: #FFE300;
 
 
 // Tipografía
-$font-family: 'OpenSans', sans-serif;
+@font-face {
+	font-family: 'OpenSans';
+	src: url('./assets/OpenSans.ttf');
+}
+$font-family: 'OpenSans';
 
 // Reset
 html, body, div, span, applet, object, iframe,

@@ -4,9 +4,14 @@ import { CharactersListComponent } from './characters-list/characters-list.compo
 import { CharacterCardComponent } from './character-card/character-card.component';
 import { CharactersRoutingModule } from './characters-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CharacterInfoComponent } from './character-info/character-info.component';
 
 @NgModule({
-  declarations: [CharactersListComponent, CharacterCardComponent],
+  declarations: [
+    CharactersListComponent,
+    CharacterCardComponent,
+    CharacterInfoComponent,
+  ],
   imports: [CommonModule, CharactersRoutingModule, HttpClientModule],
 })
 export class CharactersModule {}
