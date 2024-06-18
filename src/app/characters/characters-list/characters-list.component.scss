@@ -1,0 +1,56 @@
+@import '../../../styles.scss';
+
+.characters-list {
+  font-family: $font-family;
+  padding: .8rem 2.5rem;
+ /*  background-image: url('../../../assets/images/fondo-hiperespacial.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+ */
+  &__sub-navigation {
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: auto;
+
+    @media (min-width: 768px) {
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+  &__specie-item {
+    margin-top: 20px;
+    border-radius: .2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .8rem;
+    line-height: 1.4rem;
+    padding: .4rem 1rem;
+    background-color: $color-accent;
+    cursor: pointer;
+    text-decoration: none;
+    color: $color-background;
+    color: $color-background;
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background-color: $color-accent;
+    }
+  }
+
+  &__title {
+    margin: 40px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: $color-background;
+    /* color: $color-text; */
+  }
+
+  &__characters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
