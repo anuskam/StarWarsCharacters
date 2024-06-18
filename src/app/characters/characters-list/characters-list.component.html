@@ -1,4 +1,23 @@
-<p>characters-list works!</p>
-<div *ngFor="let item of arrCharacters">
-  {{ item.name }}
-</div>
+<section class="characters-list">
+  <div class="characters-list__sub-navigation">
+    <a
+      *ngFor="let specie of getSpecies()"
+      class="characters-list__specie-item"
+      [routerLink]="[]"
+      [fragment]="specie.toLowerCase()">
+      {{ specie }}
+    </a>
+  </div>
+  <div class="testito-contenedor">
+    <div *ngFor="let specie of getSpecies()">
+      <h2 class="characters-list__title" id="{{ specie.toLowerCase() }}">
+        {{ specie }}
+      </h2>
+      <div class="characters-list__characters">
+        <div *ngFor="let character of getCharactersBySpecies(specie)">
+          <app-character-card [character]="character"></app-character-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
