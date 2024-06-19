@@ -1,9 +1,11 @@
 <div class="character-card">
   <div class="character-card__image-wrapper">
-    <img
-      class="character-card__image"
-      [alt]="character?.name"
-      [src]="character?.image" />
+    <a [routerLink]="[character?.id]">
+      <img
+        class="character-card__image"
+        [alt]="character?.name"
+        [src]="character?.image" />
+    </a>
   </div>
   <div class="character-card__information">
     <span class="character-card__galactic-registration">{{
@@ -11,8 +13,5 @@
     }}</span>
     <span class="character-card__name">{{ character?.name }}</span>
     <span class="character-card__specie">{{ character?.species }}</span>
-    <div class="character-card__redirect">
-      <a [routerLink]="[character?.id]">Ver más</a>
-    </div>
   </div>
 </div>
