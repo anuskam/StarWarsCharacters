@@ -3,12 +3,16 @@
   position: relative;
 
   &__image-wrapper {
-    max-width: 345px;
-    max-height: 345px;
     margin-bottom: 10px;
     overflow: hidden;
     position: relative;
     width: 100%;
+    max-height: 205px;
+    
+    @media (min-width: 768px) {
+      max-width: 345px;
+      max-height: 345px;
+    }
   }
 
   &__image {
@@ -31,19 +35,30 @@
 
   &__galactic-registration {
     font-weight: bold;
-    font-size: 2rem;
-    line-height: 3rem;
+    line-height: 1rem;
+    font-size: 1.3rem;
+    @media (min-width: 768px) {
+      line-height: 3rem;
+      font-size: 2rem;
+    }
   }
 
   &__name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 3rem;
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 
   &__specie {
-    font-size: 1rem;
+    font-size: .7rem;
     font-weight: bold;
     text-transform: uppercase;
+    
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
   }
 }
 
