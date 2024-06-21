@@ -1,7 +1,9 @@
 @import '../../../styles.scss';
+@import '../../../styles/_mixins';
 
 .characters-list {
-  padding: .8rem 2.5rem;
+  @include content-card;
+  font-family: $font-family;
  /*  background-image: url('../../../assets/images/fondo-hiperespacial.jpg');
   background-repeat: no-repeat;
   background-position: center;

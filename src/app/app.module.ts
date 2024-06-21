@@ -12,6 +12,7 @@ import { provideTranslation } from './core/config/i18n/translate-loader.config';
 import { Error404Component } from './core/error404/error404.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { MultiLanguageComponent } from './core/multi-language/multi-language.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MultiLanguageComponent } from './core/multi-language/multi-language.com
     Error404Component,
     NavbarComponent,
     MultiLanguageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

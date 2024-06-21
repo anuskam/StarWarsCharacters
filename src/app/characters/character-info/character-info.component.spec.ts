@@ -8,10 +8,9 @@ describe('CharacterInfoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CharacterInfoComponent]
-    })
-    .compileComponents();
-    
+      declarations: [CharacterInfoComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CharacterInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
