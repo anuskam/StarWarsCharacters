@@ -6,6 +6,11 @@ import { Data } from '@angular/router';
 import { IDroid } from '../../interfaces/IDroid.interface';
  */
 import { IPlanetsVisited } from '../../interfaces/IPlanetsVisited.interface';
+import { Character } from '../../models/character'; // importo la clase
+import { Droid } from '../../models/droid';
+import { IDroid } from '../../interfaces/IDroid.interface';
+import { Creature } from '../../models/creature';
+import { ICreature } from '../../interfaces/ICreature.interface';
 
 @Component({
   selector: 'app-characters-list',
@@ -13,10 +18,11 @@ import { IPlanetsVisited } from '../../interfaces/IPlanetsVisited.interface';
   styleUrl: './characters-list.component.scss',
 })
 export class CharactersListComponent implements OnInit {
-  public arrCharacters: ICharacter[] = [];
+  public arrCharacters: Character[] = [];
   private charactersService = inject(CharactersService);
 
   ngOnInit(): void {
+    // Aquí estamos dando valor a atributos con el nombre que vamos a usar
     /* this.charactersService.getCharacters().subscribe(
       (character: Data) => {
         character['character'].forEach((character: Data) => {
@@ -57,8 +63,15 @@ export class CharactersListComponent implements OnInit {
         });
       }); */
     this.charactersService.getCharacters().subscribe(
-      (character: ICharacter[]) => {
-        this.arrCharacters = character;
+      (character: Data) => {
+        const newCharacter = character['characters'];
+        newCharacter.forEach((character: Data) => {
+          if (character['species'] == 'Droid') {
+            this.arrCharacters.push(this.createDroids(character));
+          } else {
+            this.arrCharacters.push(this.createCreatures(character));
+          }
+        });
       },
       error => {
         console.error('Error al cargar personajes:', error);
@@ -75,13 +88,13 @@ export class CharactersListComponent implements OnInit {
     return visitedPlanets;
   }
 
-  /* createDroids(character: any): IDroid[] {
-    const droids: IDroid[] = [];
-    character.model = new Droid(character, droid);
-    droid.durability = new Droid(character, droid);
+  createDroids(character: Data): Droid {
+    return new Droid(character as ICharacter, character as IDroid);
+  }
 
-    return droids;
-  } */
+  createCreatures(character: Data): Creature {
+    return new Creature(character as ICharacter, character as ICreature);
+  }
 
   getSpecies(): string[] {
     const speciesList = this.arrCharacters.map(character => character.species);
