@@ -1,0 +1,5 @@
+@import '../../../styles/_mixins';
+
+.character-info {
+  @include content-card;
+}
