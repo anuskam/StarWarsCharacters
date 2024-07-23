@@ -8,16 +8,19 @@
       {{ specie }}
     </a>
   </div>
-  <div class="testito-contenedor">
-    <div *ngFor="let specie of getSpecies()">
-      <h2 class="characters-list__title" id="{{ specie.toLowerCase() }}">
-        {{ specie }}
-      </h2>
-      <div class="characters-list__characters">
-        <div *ngFor="let character of getCharactersBySpecies(specie)">
+  <ng-container *ngFor="let specie of getSpecies()">
+    <h2 class="characters-list__title" id="{{ specie.toLowerCase() }}">
+      {{ specie }}
+    </h2>
+    <div class="characters-list__characters">
+      <ng-container *ngIf="isLoading; else charactersList">
+        <app-loading-spinner></app-loading-spinner>
+      </ng-container>
+      <ng-template #charactersList>
+        <ng-container *ngFor="let character of getCharactersBySpecies(specie)">
           <app-character-card [character]="character"></app-character-card>
-        </div>
-      </div>
+        </ng-container>
+      </ng-template>
     </div>
-  </div>
+  </ng-container>
 </section>

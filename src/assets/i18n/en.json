@@ -6,5 +6,6 @@
     "planets": "Planets",
     "ships": "Ships",
     "species": "Species"
-  }
+  },
+  "errorMessage": "Error message"
 }

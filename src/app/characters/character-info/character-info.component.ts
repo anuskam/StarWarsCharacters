@@ -12,11 +12,13 @@ export class CharacterInfoComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private charactersService = inject(CharactersService);
   public characterInfo: ICharacter | undefined;
+  public character: ICharacter | undefined;
+  public errorMessage: string | undefined;
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const characterId = parseInt(params['id']);
-      this.charactersService
+      /* this.charactersService
         .getCharacterById(characterId)
         .subscribe((character: ICharacter | undefined) => {
           this.characterInfo = character;
@@ -24,7 +26,15 @@ export class CharacterInfoComponent implements OnInit {
           if (!character) {
             console.log(`No se encontró un personaje con el id ${characterId}`);
           }
-        });
+        }); */
+      this.charactersService.getCharacterById(characterId).subscribe({
+        next: character => {
+          this.character = character;
+        },
+        error: err => {
+          this.errorMessage = err.message;
+        },
+      });
     });
     /* this.route.params.subscribe(params => {
       const characterId = params['id'];

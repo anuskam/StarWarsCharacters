@@ -3,9 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ICharacter } from '../interfaces/ICharacter.interface';
 import { Observable, catchError, map, of } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class CharactersService {
   private starWarsUrl: string = 'assets/starWarsCharacters.json';
   private httpClient = inject(HttpClient);
@@ -26,13 +24,30 @@ export class CharactersService {
       .pipe(map(data => data.characters));
   } */
 
-  getCharacterById(id: number): Observable<ICharacter | undefined> {
-    return this.getCharacters().pipe(
+  getCharacterById(id: number): Observable<ICharacter> {
+    /* return this.getCharacters().pipe(
       map(characters => characters.find(character => character.id === id)),
       catchError(error => {
         console.error('Error in getCharacterById', error);
         return of(undefined);
       }),
+    ); */
+    return (
+      this.httpClient
+        // es una desestructuración, se tiene que llamar igual
+        .get<{ characters: ICharacter[] }>(this.starWarsUrl)
+        .pipe(
+          map(characters => {
+            console.log(characters?.characters);
+            const character = characters.characters.find(
+              character => character.id === id,
+            );
+            if (!character) {
+              throw new Error(`errorMessage`);
+            }
+            return character;
+          }),
+        )
     );
   }
 }
