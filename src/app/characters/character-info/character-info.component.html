@@ -1,4 +1,10 @@
 <p>character-info works!</p>
-<div class="character-info">
+<div class="character-info" *ngIf="character; else errorTemplate">
   <p>patata{{ characterInfo?.name }}</p>
 </div>
+
+<ng-template #errorTemplate>
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage | translate }}</p>
+  </div>
+</ng-template>

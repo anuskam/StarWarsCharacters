@@ -20,6 +20,7 @@ import { ICreature } from '../../interfaces/ICreature.interface';
 export class CharactersListComponent implements OnInit {
   public arrCharacters: Character[] = [];
   private charactersService = inject(CharactersService);
+  public isLoading: boolean = false;
 
   ngOnInit(): void {
     // Aquí estamos dando valor a atributos con el nombre que vamos a usar
@@ -71,12 +72,26 @@ export class CharactersListComponent implements OnInit {
           } else {
             this.arrCharacters.push(this.createCreatures(character));
           }
+          this.startLoading();
         });
       },
       error => {
         console.error('Error al cargar personajes:', error);
+        this.isLoading = false;
       },
     );
+  }
+
+  startLoading(): void {
+    this.isLoading = true;
+    // Temporizador para cambiar el estado de carga después de 1 segundo
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1000);
+  }
+
+  onLoad(): void {
+    this.isLoading = false;
   }
 
   createPlanetsVisited(character: Data): IPlanetsVisited[] {
